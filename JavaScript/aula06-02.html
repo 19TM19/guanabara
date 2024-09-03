@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula06-02</title>
+    <style>
+        body {
+            background-color: blue;
+            color: red;
+            font: normal 20pt Arial;
+        }
+        h1 {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <p>Já me livrei da maldição!</p>
+    <script>
+        var nome = window.prompt("Digita teu nome patrão");
+        var n1 = Number.parseInt(window.prompt("Digite o primeiro numero"));
+        // n1 sai de string para number inteiro
+        var n2 = Number(window.prompt("Digite o segundo numero"));
+        // n2 sai de string para number real e inteiro
+        var n3 = parseFloat(window.prompt("Digite o terceiro numero"));
+        //n3 sai de string para number real
+        var s = n1 + n2 + n3
+        //o codigo puxou 2 strings e a soma virou concatenação, tivemos q transformar o window.prompt("mensagem"); em Number.parseInt(window.prompt("mensagem"));
+        // o parseInt atransforma a string em number inteiro, a outra opção é usar o parsefloat q transforma a string em number real
+        //tbm podemos usar apenas o Number(n), ele mistura os 2, então pode ser numero real ou numero inteiro
+        //o caminho inverso é utilizando o string(n) ou o n.tostring()
+        window.alert("A soma dos 3 valores é "+s);
+        window.alert(`A soma de ${n1} + ${n2} + ${n3} é ${s}`);
+        //este modo a cima usa placeholder, e deixa a linha mais clean quando usamos muitas variaveis na mesma linha
+        window.alert("Seu nome tem "+nome.length+" letras!");
+        //o n.length conta quantos caracteres a variavel tem
+        window.alert("Seu nome maiusculo é assim "+nome.toUpperCase());
+        //o n.toUpperCase() deixa o texto dentro da variavel todo maiusculo
+        window.alert("Seu nome minusculo é assim "+nome.toLowerCase());
+        //o n.toLowerCase() deixa o texto dentro da variavel todo minusculo
+    </script>
+</body>
+</html>

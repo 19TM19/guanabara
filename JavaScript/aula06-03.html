@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula06-03</title>
+</head>
+<body>
+    <script>
+        var nome = window.prompt("Qual teu nome my Lord?");
+        var n1 = parseFloat(window.prompt("Digita um numero ai meu fi"));
+        var n2 = parseFloat(window.prompt("Solta outro numero ae, na humilda"));
+        var sal = parseFloat(window.prompt("Quanto vc ganha meu parsa?"));
+        document.write(`Olá, ${nome}! seu nome tem ${nome.length} letras,</br>`);
+        //document.write é usado para escrever direto na pagina diferente do alert q usa alertas
+        document.write(`Ele maiúsculo é ${nome.toUpperCase()}</br>`);
+        document.write(`E minusculo é ${nome.toLowerCase()}.</br>`);
+        var s = n1 * n2;
+        var saldoll = sal * 0.18
+        document.write(`${s} </br>`);
+        document.write(`A multiplicação do primeiro numero = ${n1}</br> e do segundo numero = ${n2}</br> a soma deles é = ${s.toFixed(2).replace(".",",")}</br>`);
+        //o codigo a cima usa o n.tofixed(2) q esse codigo é para fixar a quantidade de numero q ira aparecer depois da virgula
+        //o codigo n.replace é usado para substituir, no exemplo substituimos o ponto por virgula 
+        document.write(`Então teu salario é ${sal.toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}</br>`)
+        //o codigo a cima é para usar em casos de dinheiro, no exemplo acima esta em real, no caso a baixo esta em dolar
+        document.write(`${saldoll.toLocaleString("pt-BR", {style: "currency", currency: "USD"})}`)
+    </script>
+</body>
+</html>
